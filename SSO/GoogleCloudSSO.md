@@ -7,7 +7,7 @@
 **참고:** 이 과정이 시작되려면 파트너가 Google이 SAML 응답을 확인할 때 사용해야 하는 공개 키와 SSO 서비스 URL을 제공해야 합니다.
 
 **그림 1: 파트너 제공 SAML 기반 SSO 서비스를 사용하여 Google에 로그인**
-
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ed7d002-9462-4611-90bd-eb7296dd1729/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ed7d002-9462-4611-90bd-eb7296dd1729/Untitled.png)
 [https://lh3.googleusercontent.com/ijxXNNLYFPLlMEjBf5yWS2xRiLDRRXUcYyX8mY61dPa1wfxpWExmdMazM7kEWWVjf6s=w661](https://lh3.googleusercontent.com/ijxXNNLYFPLlMEjBf5yWS2xRiLDRRXUcYyX8mY61dPa1wfxpWExmdMazM7kEWWVjf6s=w661)
 
 이 이미지는 다음 단계를 설명합니다.
