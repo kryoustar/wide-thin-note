@@ -16,6 +16,8 @@ The following protocols are specified in SAMLCore
 - Name Identifier Mapping Protocol
 
 # SAML 2.0 웹 브라우저 싱글 사인온
+[출처] [https://www.ibm.com/support/knowledgecenter/ko/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_saml_web_sso.html](https://www.ibm.com/support/knowledgecenter/ko/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_saml_web_sso.html)
+
 
 웹 싱글 사인온의 핵심 개념
 
