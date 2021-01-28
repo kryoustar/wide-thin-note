@@ -1,5 +1,29 @@
-<>
-[https://cloud.google.com/identity/solutions/enable-sso?hl=ko#business_problem](https://cloud.google.com/identity/solutions/enable-sso?hl=ko#business_problem)
+## 파트너 제공 SAML 기반 SSO에 대한 이해
+
+다음 과정은 사용자가 파트너 제공 SAML 기반 SSO 서비스를 통해 호스팅된 Google 애플리케이션에 로그인하는 방법을 설명합니다.
+
+아래 표시된 바와 같이, 그림 1은 사용자가 SAML 기반 SSO 서비스를 통해 Gmail과 같은 Google 애플리케이션에 로그인하는 과정을 보여줍니다. 이미지에 표시된 번호 목록은 각 단계를 더 자세하게 설명합니다.
+
+**참고:** 이 과정이 시작되려면 파트너가 Google이 SAML 응답을 확인할 때 사용해야 하는 공개 키와 SSO 서비스 URL을 제공해야 합니다.
+
+**그림 1: 파트너 제공 SAML 기반 SSO 서비스를 사용하여 Google에 로그인**
+
+[https://lh3.googleusercontent.com/ijxXNNLYFPLlMEjBf5yWS2xRiLDRRXUcYyX8mY61dPa1wfxpWExmdMazM7kEWWVjf6s=w661](https://lh3.googleusercontent.com/ijxXNNLYFPLlMEjBf5yWS2xRiLDRRXUcYyX8mY61dPa1wfxpWExmdMazM7kEWWVjf6s=w661)
+
+이 이미지는 다음 단계를 설명합니다.
+
+1. 사용자가 Gmail, 시작 페이지 또는 기타 Google 서비스와 같은 호스팅된 Google 애플리케이션에 도달하려고 시도합니다.
+2. SAML 인증 요청이 생성됩니다. SAML 요청은 인코딩되어 파트너 SSO 서비스를 위한 URL에 삽입됩니다. 사용자가 도달하려는 Google 애플리케이션의 인코딩된 URL을 포함하는 RelayState 매개변수가 또한 SSO URL에 삽입됩니다. 이 RelayState 매개변수는 수정 또는 검사 없이 되돌려 보내지는 불투명한 식별자가 됩니다.
+3. 사용자 브라우저로 리디렉션이 전송됩니다. 리디렉션 URL에는 파트너의 SSO 서비스에 제출되어야 하는 인코딩된 SAML 인증 요청이 포함됩니다.
+4. 파트너는 SAML 요청을 디코딩하여 Google ACS(어설션 소비자 서비스)와 사용자의 대상 URL(RelayState 매개변수) 모두를 위한 URL을 추출합니다. 그런 다음 파트너가 사용자를 인증합니다. 파트너는 유효한 로그인 사용자 인증 정보를 요청하거나 유효한 세션 쿠키를 검사하여 사용자를 인증할 수 있습니다.
+5. 파트너가 인증된 사용자의 사용자 이름을 포함하는 SAML 응답을 생성합니다. 이 응답은 SAML 2.0 사양에 따라 파트너의 공개 및 비공개 DSA/RSA 키로 디지털 서명됩니다.
+6. 파트너가 SAML 응답 및 RelayState 매개변수를 인코딩하여 정보를 사용자 브라우저로 반환합니다. 파트너는 브라우저가 정보를 Google ACS에 전달할 수 있는 메커니즘을 제공합니다. 예를 들어, 파트너는 양식에 SAML 응답 및 대상 URL을 삽입하고 사용자가 양식을 Google에 제출하기 위해 클릭할 수 있는 버튼을 제공할 수 있습니다. 또한 파트너는 자동으로 양식을 Google에 제출할 수 있는 페이지에 자바스크립트를 포함할 수 있습니다.
+7. Google ACS가 파트너의 공개 키를 사용하여 SAML 응답을 확인합니다. 응답이 성공적으로 확인되면 ACS에서 사용자를 대상 URL로 리디렉션합니다.
+8. 사용자가 대상 URL로 리디렉션되고 Google에 로그인됩니다.
+
+[참조]
+
+[https://support.google.com/cloudidentity/answer/6262987?hl=ko](https://support.google.com/cloudidentity/answer/6262987?hl=ko)
 
 ## 비즈니스 문제
 
@@ -83,3 +107,7 @@ IT 부서는 클라우드 앱에 SSO를 설정합니다.
 직원은 Cloud ID에 로그인합니다. SSO에 Cloud ID 사용자 인증 정보를 사용하여 필요한 클라우드 앱에 액세스할 수 있습니다.
 
 ![https://cloud.google.com/identity/solutions/images/sso.svg?hl=ko](https://cloud.google.com/identity/solutions/images/sso.svg?hl=ko)
+
+[참조]
+
+[https://cloud.google.com/identity/solutions/enable-sso?hl=ko#business_problem](https://cloud.google.com/identity/solutions/enable-sso?hl=ko#business_problem)
