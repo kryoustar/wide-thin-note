@@ -9,6 +9,8 @@
 **그림 1: 파트너 제공 SAML 기반 SSO 서비스를 사용하여 Google에 로그인**
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9edccb13-cd5a-4106-bf29-1e2af3f8e4de/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9edccb13-cd5a-4106-bf29-1e2af3f8e4de/Untitled.png)
 
+![https://lh3.googleusercontent.com/ijxXNNLYFPLlMEjBf5yWS2xRiLDRRXUcYyX8mY61dPa1wfxpWExmdMazM7kEWWVjf6s=w661](https://lh3.googleusercontent.com/ijxXNNLYFPLlMEjBf5yWS2xRiLDRRXUcYyX8mY61dPa1wfxpWExmdMazM7kEWWVjf6s=w661)
+
 이 이미지는 다음 단계를 설명합니다.
 
 1. 사용자가 Gmail, 시작 페이지 또는 기타 Google 서비스와 같은 호스팅된 Google 애플리케이션에 도달하려고 시도합니다.
