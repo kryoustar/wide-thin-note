@@ -25,7 +25,7 @@ SAML을 이용하면 사용자를 인증을 위한 IdP(Identity Provider) 서버
 
 IdP와 Service Providor 간에 메타데이타를 교환하여 신뢰 관계 설립한 후 SAML 2.0 은 다음과 같이 동작합니다.
 
-[https://t1.daumcdn.net/cfile/tistory/24058D43573DE1C834](https://t1.daumcdn.net/cfile/tistory/24058D43573DE1C834)
+![https://t1.daumcdn.net/cfile/tistory/24058D43573DE1C834](https://t1.daumcdn.net/cfile/tistory/24058D43573DE1C834)
 
 SAML 기반의 인증 과정은 다음과 같습니다.
 
