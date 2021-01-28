@@ -3,6 +3,38 @@
 Security Assertion Markup Language 2.0 (SAML 2.0)
 
 XML-based protocol
+SAML은 같은 네트워크 내의 인증과 권한에 관한 데이터를 서로 교환하기 위한 표준임.
+
+SAML을 이용하면 사용자를 인증을 위한 IdP(Identity Provider) 서버와 SP(Service Provider)간에 안전하게 인증 정보를 교환할 수 있음.
+
+- 암호 피로(Password fatigue) 감소
+
+    사용자가 여러 개의 비밀번호와 유저 네임의 쌍을 외워야하는 정신적인 피로도를 의미하는 암호피로의 감소
+
+- 인증 위임
+
+    다수의 Service Provider 와 단 하나의 IdP간의 CoT(Circle of Trust) 를 생성하여 IdP로 인증 위임되므로 사용자는 단 한번의 로그인으로 다수의 SP를 사용할 수 있음
+
+- 안전한 인증 정보의 보호
+
+    IdP,SP,사용자 사이에서 교환되는 인증 정보를 암호화
+
+- 개인 생산성 향상
+
+    지속적으로 패스워드를 재입력하는 과정이 생략되고, 패스워드 재설정 및 복구에 따른 과정이 필요 없음
+
+- 클라이언트 웹브라우저 또는 단말
+- Service Provider클라이언트가 접근하려는 애플리케이션 또는 서비스 (웹엑스 또는 재버)
+- Identity Provider(IdP)사용자 크리덴셜 (사용자명과 패스워드)을 인증하고 SAML Assertion을 발행
+- SAML Assertion사용자 인증을 위해 IdP로 부터 SP로 전달되는 보안 정보 사용자명, 권한 등의 내용을 적은 XML 문서로 변조를 막기위해 전자서명됨
+- SAML Request (인증 요청)Service Provider 가 생성하는 인증 요청으로 IdP로 인증 위임
+- Circle of Trust (CoT)하나의 IdP를 공유하는 Service Provider 들로 구성
+- MetadataSSO를 활성화하는 Service Provider 및 IdP 가 생성하는 XML 파일메타데이타의 교환으로 신뢰 관계 설립
+- Assertion Consumer Service (ACS) URLACS URL은 IdP가 특정 URL로 최종 SAML 응답을 포스트하도록 요구
+
+출처:
+
+[https://nexpert.tistory.com/606](https://nexpert.tistory.com/606)
 
 ## SAML 2.0 protocols
 
