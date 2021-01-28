@@ -23,14 +23,20 @@ SAML을 이용하면 사용자를 인증을 위한 IdP(Identity Provider) 서버
 
     지속적으로 패스워드를 재입력하는 과정이 생략되고, 패스워드 재설정 및 복구에 따른 과정이 필요 없음
 
-- 클라이언트 웹브라우저 또는 단말
-- Service Provider클라이언트가 접근하려는 애플리케이션 또는 서비스 (웹엑스 또는 재버)
-- Identity Provider(IdP)사용자 크리덴셜 (사용자명과 패스워드)을 인증하고 SAML Assertion을 발행
-- SAML Assertion사용자 인증을 위해 IdP로 부터 SP로 전달되는 보안 정보 사용자명, 권한 등의 내용을 적은 XML 문서로 변조를 막기위해 전자서명됨
-- SAML Request (인증 요청)Service Provider 가 생성하는 인증 요청으로 IdP로 인증 위임
-- Circle of Trust (CoT)하나의 IdP를 공유하는 Service Provider 들로 구성
-- MetadataSSO를 활성화하는 Service Provider 및 IdP 가 생성하는 XML 파일메타데이타의 교환으로 신뢰 관계 설립
-- Assertion Consumer Service (ACS) URLACS URL은 IdP가 특정 URL로 최종 SAML 응답을 포스트하도록 요구
+IdP와 Service Providor 간에 메타데이타를 교환하여 신뢰 관계 설립한 후 SAML 2.0 은 다음과 같이 동작합니다.
+
+[https://t1.daumcdn.net/cfile/tistory/24058D43573DE1C834](https://t1.daumcdn.net/cfile/tistory/24058D43573DE1C834)
+
+SAML 기반의 인증 과정은 다음과 같습니다.
+
+1. 클라이언트 웹브라우저 또는 단말
+2. Service Provider클라이언트가 접근하려는 애플리케이션 또는 서비스 (웹엑스 또는 재버)
+3. Identity Provider(IdP)사용자 크리덴셜 (사용자명과 패스워드)을 인증하고 SAML Assertion을 발행
+4. SAML Assertion사용자 인증을 위해 IdP로 부터 SP로 전달되는 보안 정보 사용자명, 권한 등의 내용을 적은 XML 문서로 변조를 막기위해 전자서명됨
+5. SAML Request (인증 요청)Service Provider 가 생성하는 인증 요청으로 IdP로 인증 위임
+6. Circle of Trust (CoT)하나의 IdP를 공유하는 Service Provider 들로 구성
+7. MetadataSSO를 활성화하는 Service Provider 및 IdP 가 생성하는 XML 파일메타데이타의 교환으로 신뢰 관계 설립
+8. Assertion Consumer Service (ACS) URLACS URL은 IdP가 특정 URL로 최종 SAML 응답을 포스트하도록 요구
 
 출처:
 
